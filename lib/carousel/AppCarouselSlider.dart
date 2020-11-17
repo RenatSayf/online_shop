@@ -99,7 +99,7 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
                         return Container(
                             width: 10,
                             height: 10,
-                            margin: EdgeInsets.symmetric(horizontal: 7.0, vertical: 2.0),
+                            margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 2.0),
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: _current == index ? mainColor : Colors.white,
