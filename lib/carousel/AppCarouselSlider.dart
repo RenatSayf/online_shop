@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:online_shop/carousel/AppSlide.dart';
 
 class AppCarouselSlider extends StatefulWidget {
   @override
@@ -13,6 +14,21 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
         AssetImage('assets/images/pizza1.png'),
         AssetImage('assets/images/pizza2.png'),
         AssetImage('assets/images/pizza3.png')
+    ];
+
+    List<AppSlide> slides = [
+        AppSlide(
+          image: AssetImage('assets/images/pizza1.png'),
+          text: 'Доставка в течении 30 минут',
+        ),
+        AppSlide(
+            image: AssetImage('assets/images/pizza2.png'),
+            text: 'Акция: Овощная пицца в подарок',
+        ),
+        AppSlide(
+            image: AssetImage('assets/images/pizza3.png'),
+            text: 'Пицца "Ассорти" за 450 рублей!',
+        )
     ];
 
 
@@ -39,7 +55,7 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
                         onPageChanged: callbackFunction,
                     ),
 
-                    items: images.map((img){
+                    items: slides.map((img){
                         return Builder(
                             builder: (BuildContext context){
                                 return Container(
@@ -51,7 +67,7 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
                                     child: Container(
                                         decoration: BoxDecoration(
                                             image: DecorationImage(
-                                                image: img,
+                                                image: img.image,
                                                 fit: BoxFit.cover
                                             ),
                                         ),
@@ -66,7 +82,7 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
                 ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: carouselMap(images, (index, images){
+                    children: carouselMap(slides, (index, images){
                         return Container(
                             width: 10,
                             height: 10,
