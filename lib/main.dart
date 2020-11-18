@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:online_shop/body/BenefitsContainer.dart';
 import 'package:online_shop/carousel/AppCarouselSlider.dart';
 import 'package:online_shop/menu/ShopDrawer.dart';
+import 'package:online_shop/models/Product.dart';
 import 'package:online_shop/shop_title/ShopTitle.dart';
 
 Color mainColor = Color.fromRGBO(77, 57, 61, 1);

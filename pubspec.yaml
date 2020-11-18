@@ -49,6 +49,7 @@ flutter:
    - assets/images/ben1.png
    - assets/images/ben2.png
    - assets/images/ben3.png
+   - assets/images/pizzas/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
